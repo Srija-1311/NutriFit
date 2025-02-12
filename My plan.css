@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #697E50;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    background-color: #859864;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #5e6b40;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #2d3e50;
+}
+
+.plan-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+    justify-content: center;
+    gap: 20px; /* Reduced gap for better spacing */
+    margin: 30px;
+}
+
+
+.plan-section {
+    background: white;
+    padding: 20px;
+    width: 100%; /* Changed to 100% for responsiveness */
+    max-width: 300px; /* Set a max-width for larger screens */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Added margin for spacing between sections */
+}
+
+
+.plan-section h2 {
+    color: #2d3e50;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #c0392b;
+    color: white;
+    padding: 8px 12px; /* Increased padding for better button size */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Added transition for hover effect */
+}
+
+button:hover {
+    background-color: #a93226;
+    transform: scale(1.05); /* Added scale effect on hover */
+}
+
+
+button:hover {
+    background-color: #a93226;
+}
+
+footer {
+    background-color: #697E50; /* Darker footer for contrast */
+    color: white;
+    padding: 20px;
+    margin-bottom: 0%;
+}

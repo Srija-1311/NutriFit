@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Catalog.css">
+    <title>NutriFit Catalog</title>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">Home</a></li>
+            <li><a href="./My Plan.html">My Plan</a></li>
+        </ul>
+    </nav> 
+</head>
+<body>
+    <div class="container">
+    <h1 class="my-4">Meal Catalog</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/4e/84/a8/4e84a8c9fd4e2f064c8e9416289584bc.jpg" class="card-img-top" alt="meal 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthy Salad</h5>
+                        <p class="card-text">Fresh vegetables with a light dressing.</p>
+                        <button class="btn btn-primary" onclick="saveToPlan('meal','Healthy Salad')">Save to Plan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/7c/72/32/7c72322bab4ab9383cfc4a6495888bef.jpg" class="card-img-top" alt="meal 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Protein Smoothie</h5>
+                        <p class="card-text">Rich in protein and vitamins.</p>
+                        <button class="btn btn-primary" onclick="saveToPlan('meal','Protein Smoothie')">Save to Plan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/d2/15/1b/d2151bf684222e0aceebfe6edbde1c91.jpg" class="card-img-top" alt="meal 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Grilled Chicken</h5>
+                        <p class="card-text">Perfect for a balanced diet.</p>
+                        <button class="btn btn-primary" onclick="saveToPlan('meal','Grilled Chicken')">Save to Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer>
+        <p>&copy; 23071A05U8 NutriFit</p>
+    </footer>
+</body>
+</html>

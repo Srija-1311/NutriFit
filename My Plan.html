@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Plan - NutriFit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./My plan.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="./Catalog.html">Meal Planner</a></li>
+            <li><a href="./Catalog-fitness.html">Fitness Tracker</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="my-4">My Plan</h1>
+
+    <section class="plan-container">
+        <div class="plan-section">
+            <h2>Meal Plan</h2>
+            <ul id="meal-list" class="list-unstyled">
+                <li class="media my-4">
+                    <img src="https://example.com/image1.jpg" class="mr-3" alt="Meal 1" style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Meal 1</h5>
+                        <button class="btn btn-danger" onclick="removeItem('meal', 0)">Remove</button>
+                    </div>
+                </li>
+                <li class="media my-4">
+                    <img src="https://example.com/image2.jpg" class="mr-3" alt="Meal 2" style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Meal 2</h5>
+                        <button class="btn btn-danger" onclick="removeItem('meal', 1)">Remove</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="plan-section">
+            <h2>Fitness Plan</h2>
+            <ul id="workout-list" class="list-unstyled">
+                <li class="media my-4">
+                    <img src="https://example.com/workout1.jpg" class="mr-3" alt="Workout 1" style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Workout 1</h5>
+                        <button class="btn btn-danger" onclick="removeItem('workout', 0)">Remove</button>
+                    </div>
+                </li>
+                <li class="media my-4">
+                    <img src="https://example.com/workout2.jpg" class="mr-3" alt="Workout 2" style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Workout 2</h5>
+                        <button class="btn btn-danger" onclick="removeItem('workout', 1)">Remove</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function loadPlan() {
+            let plan = JSON.parse(localStorage.getItem('nutriPlan')) || { meals: [], workouts: [] };
+            let mealList = document.getElementById('meal-list');
+            let workoutList = document.getElementById('workout-list');
+
+            mealList.innerHTML = plan.meals.map((meal, index) => 
+                `<li class="media my-4">
+                    <img src="${meal.image}" class="mr-3" alt="${meal.name}" style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">${meal.name}</h5>
+                        <button class="btn btn-danger" onclick="removeItem('meal', ${index})">Remove</button>
+                    </div>
+                </li>`
+            ).join('');
+
+            workoutList.innerHTML = plan.workouts.map((workout, index) => 
+                `<li class="media my-4">
+                    <img src="${workout.image}" class="mr-3" alt="${workout.name}" style="width: 100px;">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">${workout.name}</h5>
+                        <button class="btn btn-danger" onclick="removeItem('workout', ${index})">Remove</button>
+                    </div>
+                </li>`
+            ).join('');
+        }
+
+        function removeItem(type, index) {
+            let plan = JSON.parse(localStorage.getItem('nutriPlan'));
+
+            if (type === 'meal') {
+                plan.meals.splice(index, 1);
+            } else if (type === 'workout') {
+                plan.workouts.splice(index, 1);
+            }
+
+            localStorage.setItem('nutriPlan', JSON.stringify(plan));
+            loadPlan(); // Refresh the list
+        }
+
+        window.onload = loadPlan;
+    </script>
+    <footer>
+        <p>&copy; 23071A05U8 NutriFit</p>
+    </footer>
+
+
+</body>
+</html>
