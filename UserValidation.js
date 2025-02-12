@@ -25,3 +25,10 @@
             }
             return true; // Allow form submission
         }
+
+        function redirectToCatalog(event) {
+            event.preventDefault(); // Prevent default form submission
+            if (validateForm()) {
+                window.location.href = "./Home.html"; // Redirect to the catalog page
+            }
+        }
