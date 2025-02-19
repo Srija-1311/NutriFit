@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles.css">
-    <script src="./UserValidation.js"></script>
+    <script src="./UserValidation.js" defer></script>
+
     <title>NutriFit Balance</title>
 </head>
 <body>
@@ -17,24 +18,42 @@
                 <input type="password" name="password" placeholder="Password" required>
                 <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
 
-                <input type="number" name="age" placeholder="Age" min="1" max="100" required>
-                <select name="gender" required>
+                <span id="confirmPasswordError" style="color: red;"></span><br>
+
+
+                <input type="number" id="age" name="age" placeholder="Age" min="1" max="100" required>
+
+                <span id="ageError" style="color: red;"></span><br>
+
+                <select name="gender" id="gender" required>
+                <span id="genderError" style="color: red;"></span><br>
+
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
 
-                <input type="number" name="weight" placeholder="Weight (kg)" required>
-                <input type="number" name="height" placeholder="Height (ft)" required>
-                <select name="fitnessGoal" required>
+                <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
+
+                <span id="weightError" style="color: red;"></span><br>
+
+                <input type="number" id="height" name="height" placeholder="Height (ft)" required>
+
+                <span id="heightError" style="color: red;"></span><br>
+
+                <select name="fitnessGoal" id="fitnessGoal" required>
+                <span id="fitnessGoalError" style="color: red;"></span><br>
+
                     <option value="">Select Goal</option>
                     <option value="weightLoss">Weight Loss</option>
                     <option value="muscleGain">Muscle Gain</option>
                     <option value="maintainWeight">Maintain Weight</option>
                     <option value="improveEndurance">Improve Endurance</option>
                 </select>
-                <select name="foodAllergies" required>
+                <select name="foodAllergies" id="foodAllergies" required>
+                <span id="foodAllergiesError" style="color: red;"></span><br>
+
                     <option value="">Select Allergies</option>
                     <option value="nutAllergy">Nut Allergy</option>
                     <option value="lactoseIntolerance">Lactose Intolerance</option>
