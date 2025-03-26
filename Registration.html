@@ -11,7 +11,7 @@
     <div class="left-half">
         <div class="form-container">
             <h2>Create Your Account</h2>
-            <form onsubmit="redirectToCatalog(event)">
+            <form onsubmit="return validateRegistration(event);">
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
@@ -49,7 +49,6 @@
             </form>
         </div>
     </div>
-
     <div class="right-half">
         <div>
             <h1>Welcome to NutriFit</h1>
@@ -57,7 +56,7 @@
         </div>
     </div>
 
-    
+    <script src="./UserValidation.js"></script>
 </body>
 </body>
 </html>

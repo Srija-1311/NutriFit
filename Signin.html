@@ -10,7 +10,7 @@
     <div class="left-half">
         <div class="form-container">
             <h2>Login</h2>
-            <form action="./Home.html" method="GET">
+            <form onsubmit="return validateLogin(event);">
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">login</button>
@@ -24,6 +24,6 @@
             <p>Start your health journey today! Create your account to access personalized meal plans and fitness tracking.</p>
         </div>
     </div>
-    
+    <script src="./Loginvalidation.js"></script>
 </body>
 </html>

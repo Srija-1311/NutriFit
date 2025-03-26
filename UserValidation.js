@@ -1,34 +1,45 @@
-        function validateForm() {
-            const password = document.querySelector('input[name="password"]').value;
-            const confirmPassword = document.querySelector('input[name="confirmPassword"]').value;
-            const age = document.querySelector('input[name="age"]').value;
-            const weight = document.querySelector('input[name="weight"]').value;
-            const height = document.querySelector('input[name="height"]').value;
-            const errorMessages = [];
+function validateRegistration(event) {
+  event.preventDefault();
+function redirectToCatalog() {
+    window.location.href = "Catalog.html"; // Change the filename if necessary
+}
 
-            if (password !== confirmPassword) {
-                errorMessages.push("Passwords do not match.");
-            }
-            if (age < 1 || age > 100) {
-                errorMessages.push("Age must be between 1 and 100.");
-            }
-            if (weight <= 0) {
-                errorMessages.push("Weight must be a positive number.");
-            }
-            if (height <= 0) {
-                errorMessages.push("Height must be a positive number.");
-            }
+  const username = document.querySelector("input[name='username']").value;
+  const email = document.querySelector("input[name='email']").value;
+  const password = document.querySelector("input[name='password']").value;
+  const confirmPassword = document.querySelector("input[name='confirmPassword']").value;
+  const age = document.querySelector("input[name='age']").value;
+  const weight = document.querySelector("input[name='weight']").value;
+  const height = document.querySelector("input[name='height']").value;
 
-            if (errorMessages.length > 0) {
-                alert(errorMessages.join("\n"));
-                return false; // Prevent form submission
-            }
-            return true; // Allow form submission
-        }
-
-        function redirectToCatalog(event) {
-            event.preventDefault(); // Prevent default form submission
-            if (validateForm()) {
-                window.location.href = "./Home.html"; // Redirect to the catalog page
-            }
-        }
+  if (username.length < 3) {
+      alert("Username must be at least 3 characters long.");
+      return;
+  }
+  if (!email.includes("@") || !email.includes(".")) {
+      alert("Enter a valid email address.");
+      return;
+  }
+  if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return;
+  }
+  if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+  }
+  if (age < 1 || age > 100) {
+      alert("Enter a valid age between 1 and 100.");
+      return;
+  }
+  if (weight <= 0) {
+      alert("Enter a valid weight.");
+      return;
+  }
+  if (height <= 0) {
+      alert("Enter a valid height.");
+      return;
+  }
+  alert("Registration Successful!");
+  event.target.submit();
+}
