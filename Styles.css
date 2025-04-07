@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.left-half {
+  flex: 1;
+  background-color: #93a267;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.right-half {
+  flex: 1;
+  background-image:url("https://i.pinimg.com/736x/3a/c8/2d/3ac82dfc0e349f84d3afe91093959b81.jpg");
+  background-size: cover; /* Changed to cover for better image fitting */
+
+  background-repeat: no-repeat;
+  background-position-y: auto;
+  background-position:  center;
+  background-color: #2d3e50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px; /* Decreased padding */
+  margin: 5px 0; /* Decreased margin */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Decreased font size */
+}
+
+.form-container select {
+  width: 100%;
+  padding: 8px; /* Decreased padding */
+  margin: 5px 0; /* Decreased margin */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Decreased font size */
+}
+
+.form-container {
+  max-width: 600px; /* Increased form width */
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #697E50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #859864;
+}
+
+p {
+  padding: 12px;
+}
+
+.right-half p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.right-half h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
