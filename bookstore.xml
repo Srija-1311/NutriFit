@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE books SYSTEM "bookstore.dtd">
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<books>
+    <book>
+    <title>Harry Potter and the Philosopher's Stone</title>
+    <author>J.K. Rowling</author>
+    <price>10.99</price>
+    </book>
+</books>

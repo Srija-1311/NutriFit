@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFit - Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./Home.css">
+    <style>
+        .chart-container {
+            height: 400px;
+            margin: 20px 0;
+        }
+        .weather-card {
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .weather-card:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #2d3e50;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>NutriFit</h1>
+        <ul>
+            <li><a href="./Home_new.html">Home</a></li>
+            <li><a href="./My Plan.html">My Plan</a></li>
+            <li><a href="./weather_with_nav.html">Weather</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="padding: 20px; min-height: calc(100vh - 250px); display: flex; flex-direction: column; align-items: center; padding-bottom: 40px;">
+        <h1 style="text-align: center; margin-bottom: 10px;">Weather Dashboard</h1>
+        <div style="max-width: 800px; width: 100%;">
+            <div class="weather-card" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" id="cityInput" class="form-control" placeholder="Enter city (e.g., New Delhi)">
+                            <button id="searchBtn" class="btn btn-primary">Get Weather</button>
+                        </div>
+                        <div id="loadingSpinner" class="text-center d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="weatherChart"></canvas>
+                        </div>
+                        <div id="weatherDetails"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 23071A05U8 NutriFit</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./weather_final.js"></script>
+</body>
+</html>
