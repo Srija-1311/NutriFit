@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFit Education</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Catalog.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./Home.html">Home</a></li>
+            <!-- <li><a href="./Catalog.html">Meal Planner</a></li>
+            <li><a href="./Catalog-fitness.html">Fitness Tracker</a></li> -->
+            <li><a href="./Education.html">Education</a></li>
+            <li><a href="./Profile.html">Profile</a></li>
+            <li><a href="./My Plan.html">My Plan</a></li>
+        </ul>
+    </nav>
+
+    <div class="container education-container">
+        <h1 class="my-4">NutriFit Education Center</h1>
+        
+        <div class="row">
+            <!-- Nutrition Guides Section -->
+            <div class="col-md-6">
+                <div class="education-section">
+                    <h2><i class="fas fa-apple-alt"></i> Nutrition Guides</h2>
+                    <div class="guide-card" onclick="showGuide('macronutrients')">
+                        <h3>Macronutrients 101</h3>
+                        <p>Learn about proteins, carbs, and fats</p>
+                    </div>
+                    <div class="guide-card" onclick="showGuide('micronutrients')">
+                        <h3>Micronutrients Explained</h3>
+                        <p>Vitamins and minerals your body needs</p>
+                    </div>
+                    <div class="guide-card" onclick="showGuide('hydration')">
+                        <h3>Hydration Guide</h3>
+                        <p>How much water you really need</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exercise Tutorials Section -->
+            <div class="col-md-6">
+                <div class="education-section">
+                    <h2><i class="fas fa-dumbbell"></i> Exercise Tutorials</h2>
+                    <div class="guide-card" onclick="showGuide('squats')">
+                        <h3>Perfect Squat Form</h3>
+                        <p>Master the king of exercises</p>
+                    </div>
+                    <div class="guide-card" onclick="showGuide('pushups')">
+                        <h3>Push-Up Variations</h3>
+                        <p>From beginner to advanced</p>
+                    </div>
+                    <div class="guide-card" onclick="showGuide('hiit')">
+                        <h3>HIIT Workouts</h3>
+                        <p>Maximum results in minimal time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Guide Display Area -->
+        <div id="guide-display" class="guide-display">
+            <div id="guide-content"></div>
+            <button onclick="closeGuide()" class="btn btn-primary mt-3">Back to Guides</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 NutriFit</p>
+    </footer>
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="./Education.js"></script>
+</body>
+</html>

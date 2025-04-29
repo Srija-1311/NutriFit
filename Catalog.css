@@ -106,3 +106,62 @@ footer {
   padding: 20px;
   margin-bottom: 0%;
 }
+/* Add to your existing CSS */
+.education-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.education-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.guide-card {
+  background: #f8f9fa;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.guide-card:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.guide-card h3 {
+  color: #2d3e50;
+}
+
+.guide-display {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.macro-grid, .vitamin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.macro-item, .vitamin-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Add Font Awesome icons */
+.education-section h2 i {
+  margin-right: 10px;
+  color: #697E50;
+}
