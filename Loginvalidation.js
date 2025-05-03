@@ -1,22 +1,24 @@
-function validateLogin(event) {
-  event.preventDefault();
-
-  const username = document.querySelector("input[name='username']").value.trim();
-  const password = document.querySelector("input[name='password']").value.trim();
-
-  if (username === "") {
-      alert("Username cannot be empty.");
-      return false;
-  }
-  if (password === "") {
-      alert("Password cannot be empty.");
-      return false;
-  }
-  if (password.length < 6) {
-      alert("Password must be at least 6 characters long.");
-      return false;
-  }
-
-  alert("Login Successful!");
-  window.location.href = "./Home.html"; // Redirect after successful login
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('form[onsubmit="return validateLogin(event);"]');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get the entered username
+            const username = document.querySelector('input[name="username"]').value.trim();
+            
+            // Create a minimal user object
+            const userData = {
+                name: username || 'Guest',
+                email: username ? `${username}@example.com` : 'guest@example.com'
+            };
+            
+            // Store in session
+            sessionStorage.setItem('currentUser', JSON.stringify(userData));
+            
+            // Redirect to profile
+            window.location.href = './Profile.html';
+        });
+    }
+});
